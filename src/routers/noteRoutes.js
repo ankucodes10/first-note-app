@@ -49,6 +49,7 @@ router.put('/:id', async(req, res) =>{
         if(!note){
             return res.status(404).json({message: 'Note not found'})
         }
+        
         if(req.body.title) note.title = req.body.title
          if(req.body.content) note.content = req.body.content
           if(req.body.color) note.color = req.body.color
